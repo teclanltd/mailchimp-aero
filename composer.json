@@ -1,0 +1,21 @@
+{
+    "name": "teclanltd/mailchimp-aero",
+    "description": "",
+    "require": {
+        "aerocommerce/core": "^0",
+        "mailchimp/mailchimp": "^2.0",
+        "techquity/aero-logs": "^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teclanltd\\MailchimpAero\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Teclanltd\\MailchimpAero\\ServiceProvider"
+            ]
+        }
+    }
+}
