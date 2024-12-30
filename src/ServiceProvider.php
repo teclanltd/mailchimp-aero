@@ -30,11 +30,11 @@ class ServiceProvider extends ModuleServiceProvider
 
         $this->app->booted(function () {
             $schedule = resolve(Schedule::class);
-            $schedule->command('tqt:mailchimp:send-orders')->everyFiveMinutes();
-            $schedule->command('mailchimp:products')->hourly();
+            $schedule->command('teclan:mailchimp:send-orders')->everyFiveMinutes();
+            $schedule->command('teclan:mailchimp:products')->hourly();
 
             if (config('abandoned-orders.mailchimp')) {
-                $schedule->command('tqt:mailchimp:send-abandoned-carts')->everyFiveMinutes();
+                $schedule->command('teclan:mailchimp:send-abandoned-carts')->everyFiveMinutes();
             }
         });
 
